@@ -6,7 +6,6 @@ const styles = StyleSheet.create({
 		marginHorizontal: 10,
 		marginVertical: 7,
 		height: 70,
-		// alignItems: "center",
 	},
 
 	image: {
