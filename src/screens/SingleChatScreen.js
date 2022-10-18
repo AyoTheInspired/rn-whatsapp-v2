@@ -9,8 +9,19 @@ import bg from "../../assets/images/BG.png";
 import messages from "../../assets/data/messages.json";
 import Message from "../components/Message";
 import InputBox from "../components/InputBox";
+import { useNavigation, useRoute } from "@react-navigation/native";
+import { useEffect } from "react";
 
 const SingleChatScreen = () => {
+	const navigation = useNavigation();
+	const { params } = useRoute();
+
+	useEffect(() => {
+		navigation.setOptions({
+			title: params.name,
+		});
+	}, [params?.name]);
+
 	return (
 		<KeyboardAvoidingView
 			behavior={Platform.OS === "ios" ? "padding" : "height"}
@@ -28,6 +39,8 @@ const SingleChatScreen = () => {
 	);
 };
 
+export default SingleChatScreen;
+
 const styles = StyleSheet.create({
 	bg: {
 		flex: 1,
@@ -38,5 +51,3 @@ const styles = StyleSheet.create({
 		padding: 10,
 	},
 });
-
-export default SingleChatScreen;
