@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import SingleChatScreen from "../screens/SingleChatScreen";
 import ChatsScreens from "../screens/ChatsScreens";
 import MainTabNavigator from "./MainTabNavigator";
+import ContactsScreen from "../screens/ContactsScreen";
 
 const Navigator = () => {
 	const Stack = createNativeStackNavigator();
@@ -19,6 +20,7 @@ const Navigator = () => {
 					options={{ headerShown: false }}
 				/>
 				<Stack.Screen name="Chat" component={SingleChatScreen} />
+				<Stack.Screen name="Contacts" component={ContactsScreen} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
