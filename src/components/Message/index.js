@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
 	},
 
 	time: {
+		marginTop: 2,
 		color: "gray",
 		alignSelf: "flex-end",
 	},
