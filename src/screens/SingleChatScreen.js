@@ -18,7 +18,7 @@ const SingleChatScreen = () => {
 
 	useEffect(() => {
 		navigation.setOptions({
-			title: params.name,
+			title: params?.name || "",
 		});
 	}, [params?.name]);
 

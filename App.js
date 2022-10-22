@@ -18,13 +18,11 @@ function App() {
 				bypassCache: true,
 			});
 
-			console.log(authUser);
 			//  query DB using Auth user Sub ID
 			const userData = await API.graphql(
 				graphqlOperation(getUser, { id: authUser?.attributes?.sub })
 			);
 
-			console.log("userData", userData);
 			// create a new user if there's none, or do nothing
 			if (userData?.data?.getUser) {
 				return;
